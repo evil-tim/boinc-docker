@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/boinc
+permissions:
+  - object: /home/ubuntu/boinc/code-deploy-scripts
+    owner: ubuntu
+    group: ubuntu
+    pattern: "*.sh"
+    mode: 755
+    type:
+      - file
+hooks:
+  ApplicationStart:
+    - location: code-deploy-scripts/start_app.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStop:
+    - location: code-deploy-scripts/stop_app.sh
+      timeout: 300
+      runas: ubuntu
