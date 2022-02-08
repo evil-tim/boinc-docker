@@ -7,5 +7,4 @@ $(aws ecr get-login --no-include-email)
 # start
 cd /home/ubuntu/boinc
 /usr/local/bin/docker-compose pull
-/usr/local/bin/docker-compose up -d    
-    
+/usr/local/bin/docker-compose up -d
