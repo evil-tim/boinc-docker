@@ -1,4 +1,6 @@
 #!/bin/bash
 
-docker container stop boinc || true
-docker container rm boinc || true
+if [ -d "/home/ubuntu/boinc" ]; then
+    cd /home/ubuntu/boinc
+    /usr/local/bin/docker-compose down || true
+fi

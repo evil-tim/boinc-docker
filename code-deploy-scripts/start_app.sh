@@ -6,11 +6,6 @@ $(aws ecr get-login --no-include-email)
 
 # start
 cd /home/ubuntu/boinc
-docker pull 535425158818.dkr.ecr.ap-southeast-1.amazonaws.com/boinc:latest
-docker run \
-    -d \
-    --cpus $BOINC_CPU_LIMIT \
-    -e "BOINC_URL=$BOINC_URL" \
-    -e "BOINC_KEY=$BOINC_KEY" \
-    --name boinc \
-    535425158818.dkr.ecr.ap-southeast-1.amazonaws.com/boinc:latest
+/usr/local/bin/docker-compose pull
+/usr/local/bin/docker-compose up -d    
+    

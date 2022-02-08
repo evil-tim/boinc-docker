@@ -20,4 +20,5 @@ artifacts:
     - code-deploy-scripts/start_app.sh
     - code-deploy-scripts/stop_app.sh
     - appspec.yml
+    - docker-compose.yml
  

@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  boinc:
+    image: 535425158818.dkr.ecr.ap-southeast-1.amazonaws.com/boinc:latest
+    environment:
+      - BOINC_ACC_MGR
+      - BOINC_USER
+      - BOINC_PASS
+    cpus: 0.08
+    mem_limit: 256m
