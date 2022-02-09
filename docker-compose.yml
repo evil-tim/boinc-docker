@@ -7,4 +7,4 @@ services:
       - BOINC_URL
       - BOINC_KEY
     cpu_quota: 8000
-    mem_limit: 256m
+    mem_limit: 320m
