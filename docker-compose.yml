@@ -6,5 +6,11 @@ services:
     environment:
       - BOINC_URL
       - BOINC_KEY
+    volumes:
+      - boinc:/var/lib/boinc-client
     cpu_quota: 8000
     mem_limit: 320m
+
+volumes:
+  boinc:
+    driver: local
